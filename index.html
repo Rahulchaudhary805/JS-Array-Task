@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <p id="validation"></p>
+      <span>Company:- <input type="text" id="company" /></span><br>
+      <span>Model:- <input type="text" id="model" /></span><br>
+      <span>Momory(GB):- <input type="number" id="memory" /></span><br>
+      <span>Product Price:- <input type="number" id="price" /></span><br>
+      <span>Quantity:- <input type="number" id="quantity" /></span>
+    </div>
+
+    <button onclick="myFunction()" id="Button">ADD</button><br><br>
+<h3>Sort Items</h3>
+    <select name = "" id = "Arranging">
+        <option> --Sort-- </option>
+        <option value="ascending"> Ascending </option>
+        <option value="descending"> Descending </option>
+        </select>
+
+        <select name="" id="ColSelect">
+        <option> --Sort by-- </option>
+        <option value="company"> Company </option>
+        <option value="model"> Model </option>
+        <option value="memory"> Memory </option>
+        <option value="price"> Price </option>
+        </select>
+
+        <button onclick="sort()" >Sort</button>
+    <br>
+    <br>
+    <h3>Search Items</h3>
+        <select name="" id="selectfield">
+            <option value="">--Select Field--</option>
+            <option value="Company">Company</option>
+            <option value="model">Model</option>
+            <option value="memory">Memory</option>
+            <option value="price">Price</option>
+          </select>
+          <input type="text" id="fieldtype" />
+          <button onclick="search()">Search</button>
+<br><br>
+          <div id="demo"></div>
+<h3>Add To Cart Items</h3>
+        <select name="" id="SelectedProduct">
+            <option> -Select Product- </option>
+            </select>
+            <input type="number" id="quantity2" />
+            <button onclick="addtocart()">Add</button>
+            <button onclick="generatebill()">Generate Bill</button>
+            <div id="billtable"></div>
+
+            <h3>Update Items</h3>
+      <select name="" id="UpdatedItems">
+        <option value="">-Select Field-</option>
+      </select>
+      <input type="number" id="UpdatedQuantity" />
+      <button onclick="ItemsUpdate()">Update</button>
+      <div id="billtable"></div>
+      <table>
+        <tr>
+          <!-- <th>Company</th>
+          <th>Model</th>
+          <th>Memory(GB)</th>
+          <th>Price(Rs)</th>
+          <th>Quantity</th> -->
+        </tr>
+        <td></td>
+      </table>
+
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
